@@ -21,7 +21,7 @@ function onReady(){
     //set the title
     newLi.textContent = title;
 
-    //attach the checkboc to the Li
+    //attach the checkbox to the Li
     newLi.appendChild(checkbox);
 
     //attach the li to the ul
@@ -30,6 +30,14 @@ function onReady(){
     //empty the input
     newToDoText.value = '';
   });
+
+  addToDoForm.addEventListener('button', event => {
+    event.preventDefault();
+    //Delete To-Dos
+    let deleteLi = document.getElementById('li');
+      deleteLi.parentNode.removeChild('Deleteli');
+  });
+
 }
 
 window.onload = function () {
