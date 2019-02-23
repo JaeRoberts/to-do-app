@@ -1,51 +1,42 @@
 function onReady(){
-  const ADD_TODO_FORM = document.getElementById('addToDoForm');
-  const NEW_TODO_TEXT = document.getElementById('newToDoText');
-  const TODO_LIST = document.getElementById('toDoList');
+  const TODOS = [];
+  const ADDTODOFORM = document.getElementById('addToDoForm');
 
-  ADD_TODO_FORM.addEventListener('submit', event => {
-    event.preventDefault();
+  function createNewToDo() {
+    const NEWTODOTEXT = document.getElementById('newToDoText');
+    if (!NEWTODOTEXT.value) {return; }
+    TODOS.push({
+      title: NEWTODOTEXT.value,
+      complete: false
+    });
+    NEWTODOTEXT.value = '';
 
-    //get the text
-    let title = NEW_TODO_TEXT.value;
+    renderTheUI();
+  }
 
-    //create a new li
-    let newLi = document.createElement('li');
+function renderTheUI(){
+  const TODOLIST = document.getElementById('toDoList');
+  TODOLIST.textContent = '';
 
-    //create a new input
-    let checkbox = document.createElement('input');
+  TODOS.forEach(function(toDo) {
+    const NEWLI = document.createElement('li');
+    const CHECKBOX = document.createElement('input');
+    CHECKBOX.type = "checkbox";
 
-    let deleteButton = document.createElement('button');
+    NEWLI.textContent = toDo.title;
 
-    //set the input's type to checkbox
-    checkbox.type = "checkbox";
-
-    //set button type to button
-    deleteButton.type = "button";
-
-    deleteButton.addEventListener('click', function(event){
-
-      //this.parentElement represents the button's <li> parent
-      TODO_LIST.removeChild(this.parentElement);
-    })
-
-    //set the title
-    newLi.textContent = title;
-
-    //attach the checkbox to the Li
-    newLi.appendChild(checkbox);
-
-    //attach the button to the Li and add text to the button
-    newLi.appendChild(deleteButton).textContent = "Delete";
-
-    //attach the li to the ul
-    TODO_LIST.appendChild(newLi);
-
-    //empty the input
-    NEW_TODO_TEXT.value = '';
+    TODOLIST.appendChild(NEWLI);
+    NEWLI.appendChild(CHECKBOX);
 
   });
+}
 
+ADDTODOFORM.addEventListener('submit', event => {
+  event.preventDefault();
+  createNewToDo();
+});
+
+renderTheUI();
 
 }
 
