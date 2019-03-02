@@ -21,6 +21,6 @@ The objective of the project was to:
 
 ![images](https://github.com/JaeRoberts/to-do-app/blob/master/images/to-do-preview-2.png)
 
-###### After pressing ENTER or clicking ADD A NEW TASK, the `createNewToDo` function runs and populates the space below with the submitted list item.
+###### After pressing ENTER or clicking ADD A NEW TASK, the `createNewToDo()` function runs and populates the space below with the submitted list item.
 
 ![images](https://github.com/JaeRoberts/to-do-app/blob/master/images/to-do-preview-2.png)
