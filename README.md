@@ -23,4 +23,4 @@ The objective of the project was to:
 
 ###### After pressing ENTER or clicking ADD A NEW TASK, the `createNewToDo()` function runs and populates the space below with the submitted list item.
 
-![images](https://github.com/JaeRoberts/to-do-app/blob/master/images/to-do-preview-2.png)
+![images](https://github.com/JaeRoberts/to-do-app/blob/master/images/to-do-preview-3.png)
