@@ -14,12 +14,13 @@ The objective of the project was to:
 - Organize code in a logical, readable manner
 
 -----
-
-![images](https://github.com/JaeRoberts/to-do-app/blob/master/images/to-do-preview-1.png)
 ###### This is what the app looks like at first sight.
+![images](https://github.com/JaeRoberts/to-do-app/blob/master/images/to-do-preview-1.png)
 
-![images](https://github.com/JaeRoberts/to-do-app/blob/master/images/to-do-preview-2.png)
 ###### After clicking the textfield, it's state changes to make room for the user input.
 
 ![images](https://github.com/JaeRoberts/to-do-app/blob/master/images/to-do-preview-2.png)
+
 ###### After pressing ENTER or clicking ADD A NEW TASK, the `createNewToDo` function runs and populates the space below with the submitted list item.
+
+![images](https://github.com/JaeRoberts/to-do-app/blob/master/images/to-do-preview-2.png)
